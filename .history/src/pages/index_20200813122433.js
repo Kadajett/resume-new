@@ -21,6 +21,7 @@ const IndexPage = () => {
     })
       .then(response => response.json())
       .then(data => {
+        return;
         if (data.success !== false) {
           setConfig(data);
           setConfigLoadingError(true);

@@ -21,6 +21,7 @@ const IndexPage = () => {
     })
       .then(response => response.json())
       .then(data => {
+        return;
         if (data.success !== false) {
           setConfig(data);
           setConfigLoadingError(true);
@@ -31,7 +32,11 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      {loadingFullPage && <div className="loading"></div>}
+      {loadingFullPage && (
+        <div className="loading">
+          <AccessAlarmIcon />
+        </div>
+      )}
 
       {config && !loadingFullPage && (
         <>

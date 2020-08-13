@@ -4,9 +4,8 @@ import Layout from '../components/Layout';
 
 // import { Link } from 'gatsby';
 import Sidebar from '../components/Sidebar';
-import { Contact } from '../components/contact';
-import AccessAlarmIcon from '@material-ui/icons/AccessAlarm';
 
+import { Contact } from '../components/contact';
 const IndexPage = () => {
   const [config, setConfig] = useState(null);
   const [loadingFullPage, setLoadingFullPage] = useState(false);
@@ -31,8 +30,6 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      {loadingFullPage && <div className="loading"></div>}
-
       {config && !loadingFullPage && (
         <>
           <Sidebar />

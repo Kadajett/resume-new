@@ -4,35 +4,24 @@ import Layout from '../components/Layout';
 
 // import { Link } from 'gatsby';
 import Sidebar from '../components/Sidebar';
-import { Contact } from '../components/contact';
-import AccessAlarmIcon from '@material-ui/icons/AccessAlarm';
+import config from '../../config';
 
+import { Contact } from '../components/contact';
 const IndexPage = () => {
   const [config, setConfig] = useState(null);
   const [loadingFullPage, setLoadingFullPage] = useState(false);
-  const [configLoadingError, setConfigLoadingError] = useState(false);
   useEffect(() => {
     setLoadingFullPage(true);
-    fetch('https://api.jsonbin.io/b/5f3571314d93991036143704', {
-      headers: {
-        'secret-key':
-          '$2b$10$9QBkbjUAZmd.MdsutmbEW.uUlHWhR7ic/OytCoQp53BbYMFeE9LGC',
-      },
-    })
+    fetch('https://jsonkeeper.com/b/UF3L')
       .then(response => response.json())
       .then(data => {
-        if (data.success !== false) {
-          setConfig(data);
-          setConfigLoadingError(true);
-        }
+        setConfig(data);
         setLoadingFullPage(false);
       });
   }, []);
 
   return (
     <Layout>
-      {loadingFullPage && <div className="loading"></div>}
-
       {config && !loadingFullPage && (
         <>
           <Sidebar />

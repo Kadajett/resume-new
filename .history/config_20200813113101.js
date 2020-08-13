@@ -8,27 +8,32 @@ module.exports = {
   manifestDisplay: 'standalone',
   manifestIcon: 'src/assets/img/website-icon.png',
   pathPrefix: `/gatsby-starter-resume/`, // This path is subpath of your hosting https://domain/portfolio
-  firstName: 'Jeremy',
-  lastName: 'Stover',
+  firstName: 'Anubhav',
+  lastName: 'Srivastava',
   // social
   socialLinks: [
     {
       icon: 'fa-github',
       name: 'Github',
-      url: 'https://github.com/kadajett',
+      url: 'https://github.com/anubhavsrivastava',
     },
     {
       icon: 'fa-linkedin-in',
       name: 'Linkedin',
-      url: 'https://linkedin.com/in/kadajett/',
+      url: 'https://linkedin.com/in/theanubhav/',
     },
     {
       icon: 'fa-twitter',
       name: 'Twitter',
-      url: 'https://twitter.com/thewanderingscholar',
-    }
+      url: 'https://twitter.com/onlyanubhav',
+    },
+    {
+      icon: 'fa-facebook-f',
+      name: 'Facebook',
+      url: 'https://facebook.com/theanubhav',
+    },
   ],
-  email: 'i@jeremyscript.com',
-  calendly: 'https://calendly.com/kadajett',
-  address: 'Boston, MA',
+  email: 'anubhav.srivastava00@gmail.com',
+  phone: '000-00000',
+  address: '305 Del Sol, Sunnyvale, CA',
 };

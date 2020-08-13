@@ -29,6 +29,5 @@ module.exports = {
     }
   ],
   email: 'i@jeremyscript.com',
-  calendly: 'https://calendly.com/kadajett',
   address: 'Boston, MA',
 };
