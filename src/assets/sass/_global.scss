@@ -50,11 +50,14 @@ p.lead {
 }
 
 .social-icons {
-  width: 100vw;
+  
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
+  @media (max-width: 992px) {
+    width: 100vw;
+  }
   @media (min-width: 992px) {
     height: 100vh;
     display: flex;
@@ -140,5 +143,29 @@ p.lead {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+
+body.dark {
+  -webkit-font-smoothing: antialiased;
+  h1,h2,h3 {
+    color: #9aa4af;
+  }
+  p {
+    color: #b5b5b5;
+  }
+  background-color: $gray-900;
+  .text-primary {
+    color: $dark-primary !important;
+  }
+  .bg-primary {
+    background-color: $dark-primary !important;
+  }
+  .subheading {
+    
+  }
+  .navbar-dark {
+    background-color: #343a40 !important;
   }
 }

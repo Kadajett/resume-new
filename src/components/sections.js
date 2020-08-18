@@ -24,9 +24,7 @@ const Sections = ({ config }) => {
         }}
         ariaTag={EXPERIENCE_ID}
       />
-      <Collapse isOpen={collapseState.experience} id={EXPERIENCE_ID}>
-        <Experience jobList={config.jobHistory}></Experience>
-      </Collapse>
+      <Experience jobList={config.jobHistory}></Experience>
       <hr className="m-0" />
       <SectionHeader
         title={'Skills'}
@@ -39,9 +37,7 @@ const Sections = ({ config }) => {
         }}
         ariaTag={EXPERIENCE_ID}
       />
-      <Collapse isOpen={collapseState.skills} id={EXPERIENCE_ID}>
-        <Skills jobList={config.skillsList}></Skills>
-      </Collapse>
+      <Skills jobList={config.skillsList}></Skills>
       <hr className="sectionBottom" />
     </section>
   );

@@ -1,5 +1,4 @@
 const config = require('./config');
-
 module.exports = {
   pathPrefix: config.pathPrefix,
   siteMetadata: {
@@ -7,6 +6,7 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-dark-mode',
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

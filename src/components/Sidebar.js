@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { OFFLINE_CONFIG } from '../constants';
 
-const Sidebar = ({ config = OFFLINE_CONFIG }) => {
+const Sidebar = ({ config }) => {
   return (
     <nav
       className="navbar navbar-expand-lg navbar-dark bg-primary"
