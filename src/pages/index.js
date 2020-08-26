@@ -58,7 +58,6 @@ const IndexPage = () => {
                       <input
                         type="checkbox"
                         onChange={e => {
-                          debugger;
                           toggleTheme(e.target.checked ? 'dark' : 'light');
                         }}
                         checked={theme === 'dark'}
