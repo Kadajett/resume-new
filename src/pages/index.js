@@ -62,6 +62,7 @@ const IndexPage = () => {
                         }}
                         checked={theme === 'dark'}
                       />
+                      {' '}
                       Dark mode
                     </label>
                     <Contact config={localConfig} />
