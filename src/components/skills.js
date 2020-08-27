@@ -1,52 +1,54 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {
+  FaCode,
+  FaNode,
+  FaReact,
+  FaSass,
+  FaAngular,
+  FaGulp,
+  FaNpm,
+} from 'react-icons/fa';
 
-const Skills = ({ jobList, isOpen }) => {
+const Skills = ({ skillsList, isOpen }) => {
+  const getSkillIcon = skillName => {
+    let iconComponent = null;
+    switch (skillName) {
+      case 'fa-node-js':
+        iconComponent = <FaNode />;
+        break;
+      case 'fa-react':
+        iconComponent = <FaReact />;
+        break;
+      case 'fa-sass':
+        iconComponent = <FaSass />;
+        break;
+      case 'fa-angular':
+        iconComponent = <FaAngular />;
+        break;
+      case 'fa-gulp':
+        iconComponent = <FaGulp />;
+        break;
+      case 'fa-npm':
+        iconComponent = <FaNpm />;
+        break;
+      default:
+        iconComponent = <FaCode />;
+        break;
+    }
+    return <i className="fab">{iconComponent}</i>;
+  };
   return (
     <section
       className="resume-section p-3 p-lg-5 d-flex align-items-center"
       id="skills"
     >
       <div className="w-100">
-
         <div className="subheading mb-3">Programming Languages &amp; Tools</div>
         <ul className="list-inline dev-icons">
-          <li className="list-inline-item">
-            <i className="fab fa-html5"></i>
-          </li>
-          <li className="list-inline-item">
-            <i className="fab fa-css3-alt"></i>
-          </li>
-          <li className="list-inline-item">
-            <i className="fab fa-js-square"></i>
-          </li>
-          <li className="list-inline-item">
-            <i className="fab fa-angular"></i>
-          </li>
-          <li className="list-inline-item">
-            <i className="fab fa-react"></i>
-          </li>
-          <li className="list-inline-item">
-            <i className="fab fa-node-js"></i>
-          </li>
-          <li className="list-inline-item">
-            <i className="fab fa-sass"></i>
-          </li>
-          <li className="list-inline-item">
-            <i className="fab fa-less"></i>
-          </li>
-          <li className="list-inline-item">
-            <i className="fab fa-wordpress"></i>
-          </li>
-          <li className="list-inline-item">
-            <i className="fab fa-gulp"></i>
-          </li>
-          <li className="list-inline-item">
-            <i className="fab fa-grunt"></i>
-          </li>
-          <li className="list-inline-item">
-            <i className="fab fa-npm"></i>
-          </li>
+          {skillsList.map(skill => (
+            <li className="list-inline-item">{getSkillIcon(skill)}</li>
+          ))}
         </ul>
 
         <div className="subheading mb-3">Workflow</div>

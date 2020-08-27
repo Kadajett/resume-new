@@ -37,7 +37,7 @@ const Sections = ({ config }) => {
         }}
         ariaTag={EXPERIENCE_ID}
       />
-      <Skills jobList={config.skillsList}></Skills>
+      <Skills skillsList={config.skills}></Skills>
       <hr className="sectionBottom" />
     </section>
   );
