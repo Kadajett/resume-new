@@ -8,6 +8,7 @@ import {
   FaAngular,
   FaGulp,
   FaNpm,
+  FaCheck,
 } from 'react-icons/fa';
 
 const Skills = ({ skillsList, isOpen }) => {
@@ -47,26 +48,28 @@ const Skills = ({ skillsList, isOpen }) => {
         <div className="subheading mb-3">Programming Languages &amp; Tools</div>
         <ul className="list-inline dev-icons">
           {skillsList.map(skill => (
-            <li className="list-inline-item">{getSkillIcon(skill)}</li>
+            <li key={skill} className="list-inline-item">
+              {getSkillIcon(skill)}
+            </li>
           ))}
         </ul>
 
         <div className="subheading mb-3">Workflow</div>
         <ul className="fa-ul mb-0">
           <li>
-            <i className="fa-li fa fa-check"></i>
+            <FaCheck />
             Mobile-First, Responsive Design
           </li>
           <li>
-            <i className="fa-li fa fa-check"></i>
+            <FaCheck />
             Cross Browser Testing &amp; Debugging
           </li>
           <li>
-            <i className="fa-li fa fa-check"></i>
+            <FaCheck />
             Cross Functional Teams
           </li>
           <li>
-            <i className="fa-li fa fa-check"></i>
+            <FaCheck />
             Agile Development &amp; Scrum
           </li>
         </ul>
